@@ -53,7 +53,7 @@ def hentaidl(client, callback_query):
     hentaidb = MongoClient(MONGO_URL)
     hentai = hentaidb["MangaDb"]["Name"]
     chatid = callback_query.from_user.id
-    messageid = callback_query.message.message_id
+    messageid = callback_query.message.id
     url = f"https://hanime-tv-api-phi.vercel.app/link?id={link}" 
     result = requests.get(url).json()  
     url = result["data"][0]["url"]
