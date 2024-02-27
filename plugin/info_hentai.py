@@ -1,11 +1,10 @@
+# plugin/info_hentai.py
+
 from pyrogram import *
 from pyrogram.types import *
 import requests
 import os
 import json
-
-
-
 
 def infohentai(client, callback_query):
     click = callback_query.data
